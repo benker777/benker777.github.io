@@ -162,3 +162,64 @@
 
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #f0f0f0; /* Um branco suave para contraste */
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Apenas para Você</h1>
+    <p>
+        Se eu pudesse te dar algo, eu te daria a capacidade de se ver pelos meus olhos. Só então você perceberia o quão especial é para mim. Você me mostrou que o amor não é sobre encontrar alguém para viver, mas sobre encontrar alguém sem quem a vida não vale a pena ser vivida.
+    </p>
+    <p>
+        Antes de você, eu existia. Com você, eu realmente vivo. E em cada momento, em cada riso, em cada olhar, eu encontro uma nova razão para amar. Meu mundo era em preto e branco, e você chegou com todas as cores do arco-íris.
+    </p>
+    <p>
+        Você é a paz no meu caos, a calma na tempestade, o sorriso que eu não sabia que procurava. Eu te escolho hoje, amanhã e para sempre. Você é e sempre será o meu lar.
+    </p>
+</div>
+
+</body>
+</html>
