@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carinha Estrela</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .face {
+      width: 200px;
+      height: 200px;
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    /* Olhos em forma de estrela */
+    .eye {
+      position: absolute;
+      top: 40px;
+      font-size: 30px;
+    }
+    .left-eye {
+      left: 50px;
+    }
+    .right-eye {
+      right: 50px;
+    }
+
+    /* Boca ondulada */
+    .mouth {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="face">
+    <div class="eye left-eye">★</div>
+    <div class="eye right-eye">★</div>
+    <div class="mouth">~~~</div>
+  </div>
+</body>
+</html>
