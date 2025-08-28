@@ -75,151 +75,58 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeo Fofo de Animais</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-        }
-        h1 {
-            color: #333;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .gift-box-link {
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-        }
-        .gift-box-link:hover {
-            transform: scale(1.1);
-        }
-        .gift-box-link .icon {
-            font-size: 6em;
-            text-shadow: 
-                -2px -2px 0 #0000FF,  /* Sombra azul para a esquerda e para cima */
-                 2px -2px 0 #0000FF,  /* Sombra azul para a direita e para cima */
-                -2px  2px 0 #0000FF,  /* Sombra azul para a esquerda e para baixo */
-                 2px  2px 0 #0000FF;  /* Sombra azul para a direita e para baixo */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria Anime Interativa</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>🌟 Galeria de Personagens de Anime 🌟</h1>
+  </header>
 
-<div class="container">
-    <h1>Vídeo Fofo do Dia</h1>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/zfl1_FNk0h0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <main class="gallery">
+    <!-- Card de Personagem -->
+    <div class="card" data-name="Naruto Uzumaki" data-anime="Naruto" data-description="O ninja número um mais imprevisível de Konoha!">
+      <img src="https://i.imgur.com/5A1Zc5J.png" alt="Naruto Uzumaki" />
+      <div class="card-info">
+        <h3>Naruto</h3>
+      </div>
     </div>
-    
-    <a href="https://www.youtube.com/watch?v=zfl1_FNk0h0" class="gift-box-link" target="_blank">
-        <span class="icon" style="color: #FFD700;">🎁</span>
-    </a>
-    <p>Clique na caixinha para ver o vídeo direto no YouTube!</p>
-</div>
 
+    <div class="card" data-name="Goku" data-anime="Dragon Ball Z" data-description="O sayajin mais poderoso da Terra!">
+      <img src="https://i.imgur.com/nUzQgaj.png" alt="Goku" />
+      <div class="card-info">
+        <h3>Goku</h3>
+      </div>
+    </div>
+
+    <div class="card" data-name="Luffy" data-anime="One Piece" data-description="O futuro Rei dos Piratas!">
+      <img src="https://i.imgur.com/HY0yI8C.png" alt="Luffy" />
+      <div class="card-info">
+        <h3>Luffy</h3>
+      </div>
+    </div>
+
+    <!-- Adicione mais cards se quiser -->
+  </main>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-name"></h2>
+      <p><strong>Anime:</strong> <span id="modal-anime"></span></p>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Você</title>
-    <style>
-        body {
-            background-color: #000000;
-            color: #f0f0f0; /* Um branco suave para contraste */
-            font-family: 'Times New Roman', Times, serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #ffffff;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Apenas para Você</h1>
-    <p>
-        Se eu pudesse te dar algo, eu te daria a capacidade de se ver pelos meus olhos. Só então você perceberia o quão especial é para mim. Você me mostrou que o amor não é sobre encontrar alguém para viver, mas sobre encontrar alguém sem quem a vida não vale a pena ser vivida.
-    </p>
-    <p>
-        Antes de você, eu existia. Com você, eu realmente vivo. E em cada momento, em cada riso, em cada olhar, eu encontro uma nova razão para amar. Meu mundo era em preto e branco, e você chegou com todas as cores do arco-íris.
-    </p>
-    <p>
-        Você é a paz no meu caos, a calma na tempestade, o sorriso que eu não sabia que procurava. Eu te escolho hoje, amanhã e para sempre. Você é e sempre será o meu lar.
-    </p>
-</div>
-
-</body>
-</html>
