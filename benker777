@@ -1,55 +1,68 @@
-
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galeria Anime Interativa</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<title>Pixelate Photo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body{font-family:Arial,Helvetica,sans-serif; display:flex; flex-direction:column; gap:12px; align-items:center; padding:24px;}
+  canvas{border:1px solid #ccc;}
+</style>
 </head>
 <body>
-  <header>
-    <h1>🌟 Galeria de Personagens de Anime 🌟</h1>
-  </header>
+  <h2>Pixelizar imagem</h2>
+  <input id="file" type="file" accept="image/*">
+  <label>Pixel size: <input id="size" type="range" min="2" max="50" value="8"></label>
+  <canvas id="out"></canvas>
+  <a id="download" style="display:none">Download</a>
 
-  <main class="gallery">
-    <!-- Card de Personagem -->
-    <div class="card" data-name="Naruto Uzumaki" data-anime="Naruto" data-description="O ninja número um mais imprevisível de Konoha!">
-      <img src="https://i.imgur.com/5A1Zc5J.png" alt="Naruto Uzumaki" />
-      <div class="card-info">
-        <h3>Naruto</h3>
-      </div>
-    </div>
+<script>
+const fileIn = document.getElementById('file');
+const out = document.getElementById('out');
+const sizeControl = document.getElementById('size');
+const download = document.getElementById('download');
 
-    <div class="card" data-name="Goku" data-anime="Dragon Ball Z" data-description="O sayajin mais poderoso da Terra!">
-      <img src="https://i.imgur.com/nUzQgaj.png" alt="Goku" />
-      <div class="card-info">
-        <h3>Goku</h3>
-      </div>
-    </div>
+fileIn.addEventListener('change', () => {
+  const f = fileIn.files[0];
+  if (!f) return;
+  const url = URL.createObjectURL(f);
+  loadAndPixelate(url, parseInt(sizeControl.value,10));
+});
 
-    <div class="card" data-name="Luffy" data-anime="One Piece" data-description="O futuro Rei dos Piratas!">
-      <img src="https://i.imgur.com/HY0yI8C.png" alt="Luffy" />
-      <div class="card-info">
-        <h3>Luffy</h3>
-      </div>
-    </div>
+sizeControl.addEventListener('input', () => {
+  const imgUrl = out.dataset.src;
+  if (imgUrl) loadAndPixelate(imgUrl, parseInt(sizeControl.value,10));
+});
 
-    <!-- Adicione mais cards se quiser -->
-  </main>
+function loadAndPixelate(src, pixelSize){
+  const img = new Image();
+  img.onload = () => {
+    // canvas temporário menor
+    const w = img.width, h = img.height;
+    const smallW = Math.max(1, Math.floor(w / pixelSize));
+    const smallH = Math.max(1, Math.floor(h / pixelSize));
 
-  <!-- Modal -->
-  <div class="modal hidden" id="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2 id="modal-name"></h2>
-      <p><strong>Anime:</strong> <span id="modal-anime"></span></p>
-      <p id="modal-description"></p>
-    </div>
-  </div>
+    const temp = document.createElement('canvas');
+    temp.width = smallW; temp.height = smallH;
+    const tctx = temp.getContext('2d', {willReadFrequently:true});
+    tctx.drawImage(img, 0, 0, smallW, smallH);
 
-  <script src="script.js"></script>
+    out.width = smallW * pixelSize;
+    out.height = smallH * pixelSize;
+    const ctx = out.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    // desenha ampliado (efeito pixelado)
+    ctx.clearRect(0,0,out.width,out.height);
+    ctx.drawImage(temp, 0, 0, out.width, out.height);
+
+    out.dataset.src = src;
+    download.style.display = 'inline-block';
+    download.href = out.toDataURL('image/png');
+    download.download = 'pixel_art.png';
+    download.textContent = 'Baixar PNG pixelizado';
+  };
+  img.src = src;
+}
+</script>
 </body>
 </html>
-
-
-
