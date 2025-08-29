@@ -1,133 +1,18 @@
-<!doctype html>
+      <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>para você❤️❤️</title>
-  <style>
-    :root{
-      --bg:#0f1720;
-      --card:#0b1220;
-      --accent:#9ca3ff;
-      --text:#e6eef8;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#071023 0%, #0b1530 100%);
-      color:var(--text);
-      display:flex;
-      min-height:100vh;
-      align-items:flex-start;
-      justify-content:center;
-      padding:40px 16px;
-    }
+  <meta charset="UTF-8">
+  <title>Minha Foto</title>
+</head>
+<body>
+  <h1>Minha Foto no Site</h1>
 
-    .container{
-      width:100%;
-      max-width:1100px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
-      border-radius:14px;
-      padding:28px;
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      backdrop-filter: blur(6px);
-    }
+  <!-- Exemplo com link da internet -->
+  <img src="https://www.instagram.com/p/DN8X392kd7ulEPC11npWYBuXv0utQcjxdzzY9g0/?igsh=eGp0c3FhYWRhY3py" alt="Descrição da foto" width="300">
 
-    header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
-    }
-    h1{font-size:1.35rem; margin:0;}
-    p.lead{margin:0; opacity:0.85; font-size:0.95rem}
+  <!-- Exemplo com imagem salva na pasta do site -->
+  <!-- Se a foto estiver na mesma pasta do arquivo .html -->
+  <img src="https://www.instagram.com/p/DN8X392kd7ulEPC11npWYBuXv0utQcjxdzzY9g0/?igsh=eGp0c3FhYWRhY3py" alt="Minha foto" width="300">
 
-    /* Grid de miniaturas */
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:16px;
-      margin-top:20px;
-    }
-
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));
-      border-radius:10px;
-      padding:10px;
-      transition: transform .22s, box-shadow .22s;
-      cursor:pointer;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      align-items:stretch;
-    }
-    .card:hover{ transform: translateY(-6px); box-shadow:0 12px 30px rgba(2,6,23,0.6); }
-
-    .thumb{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:8px;
-      background:#08111b;
-    }
-
-    .meta{ display:flex; justify-content:space-between; align-items:center; gap:8px; }
-    .caption{ font-size:0.95rem; color:var(--text); opacity:0.95; }
-    .small{ font-size:0.82rem; color: #b9d0ff; opacity:0.9; }
-
-    /* Lightbox */
-    .lightbox{
-      position:fixed;
-      inset:0;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      background:rgba(2,6,23,0.78);
-      z-index:9999;
-      padding:24px;
-    }
-    .lightbox.open{ display:flex; }
-    .lightbox .frame{
-      max-width:1200px;
-      width:100%;
-      max-height:90vh;
-      border-radius:12px;
-      overflow:hidden;
-      background:var(--card);
-      box-shadow:0 20px 60px rgba(0,0,0,0.7);
-      display:flex;
-      flex-direction:column;
-    }
-    .lightbox img{
-      width:100%;
-      height: auto;
-      object-fit:contain;
-      background:#000;
-      display:block;
-    }
-    .lb-controls{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:12px 14px;
-      gap:10px;
-    }
-    .btn{
-      border:0;
-      background:transparent;
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:600;
-    }
-    .btn:hover{ background:rgba(255,255,255,0.03); }
-
-    .close{
-      font-size:1.05rem;
-      opacity:0.95;
-    }
-
-    footer{ margin-top:
+</body>
+</html>
