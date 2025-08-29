@@ -1,73 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil TikTok</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ff4500;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #333;
-            font-size: 2em;
-            margin: 10px 0;
-        }
-        p {
-            color: #666;
-            font-size: 1em;
-            margin: 0 0 30px;
-        }
-        .tiktok-link {
-            text-decoration: none;
-            color: #ff4500;
-            transition: transform 0.2s ease-in-out;
-            display: inline-block;
-        }
-        .tiktok-link:hover {
-            transform: scale(1.1);
-        }
-        .star-icon {
-            font-size: 4em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria Anime Interativa</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>🌟 Galeria de Personagens de Anime 🌟</h1>
+  </header>
 
-<div class="container">
-    <img src="https://via.placeholder.com/120" alt="Sua Foto de Perfil" class="profile-pic">
-    <h1>aryhonbenker</h1>
-    <p>Um pouco de loucura, muito de humor! 🤪</p>
-    
-    <a href="https://www.tiktok.com/@aryhonbenker" class="tiktok-link" target="_blank">
-        <span class="star-icon">⭐</span>
-    </a>
-    
-    <p>Clique na estrela para me seguir no TikTok!</p>
-</div>
+  <main class="gallery">
+    <!-- Card de Personagem -->
+    <div class="card" data-name="Naruto Uzumaki" data-anime="Naruto" data-description="O ninja número um mais imprevisível de Konoha!">
+      <img src="https://i.imgur.com/5A1Zc5J.png" alt="Naruto Uzumaki" />
+      <div class="card-info">
+        <h3>Naruto</h3>
+      </div>
+    </div>
 
+    <div class="card" data-name="Goku" data-anime="Dragon Ball Z" data-description="O sayajin mais poderoso da Terra!">
+      <img src="https://i.imgur.com/nUzQgaj.png" alt="Goku" />
+      <div class="card-info">
+        <h3>Goku</h3>
+      </div>
+    </div>
+
+    <div class="card" data-name="Luffy" data-anime="One Piece" data-description="O futuro Rei dos Piratas!">
+      <img src="https://i.imgur.com/HY0yI8C.png" alt="Luffy" />
+      <div class="card-info">
+        <h3>Luffy</h3>
+      </div>
+    </div>
+
+    <!-- Adicione mais cards se quiser -->
+  </main>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-name"></h2>
+      <p><strong>Anime:</strong> <span id="modal-anime"></span></p>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
