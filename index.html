@@ -1,18 +1,46 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Minha Foto</title>
+  <title>Meu Álbum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .galeria img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <h1>Minha Foto no Site</h1>
+  <h1>Meu Álbum de Fotos</h1>
 
-  <!-- Exemplo com link da internet -->
-  <img src="https://www.instagram.com/p/DN8X392kd7ulEPC11npWYBuXv0utQcjxdzzY9g0/?igsh=eGp0c3FhYWRhY3py" alt="Descrição da foto" width="300">
-
-  <!-- Exemplo com imagem salva na pasta do site -->
-  <!-- Se a foto estiver na mesma pasta do arquivo .html -->
-  <img src="https://www.instagram.com/p/DN8X392kd7ulEPC11npWYBuXv0utQcjxdzzY9g0/?igsh=eGp0c3FhYWRhY3py" alt="Minha foto" width="300">
+  <div class="galeria">
+    <img src="foto1.jpg" alt="Foto 1">
+    <img src="foto2.jpg" alt="Foto 2">
+    <img src="foto3.jpg" alt="Foto 3">
+    <img src="foto4.jpg" alt="Foto 4">
+  </div>
 
 </body>
 </html>
