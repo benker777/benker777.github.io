@@ -1,39 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Dia dos Namorados</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item-caption {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Dia dos Namorados</h1>
-  </header>
-  <section class="fotos">
-    <div class="foto">
-      <img src="" alt="Foto 1">
-      <p>Foto 1</p>
-    </div>
-    <div > 
-      <img src="" alt="Foto 2">
-      <p>Foto 2</p>
-    </div>
-    <img src=""
-    <div>
-    <img src=""
-  </section>
-  <section class="">
-    <h2>Links úteis</h2>
-    <ul>
-      <li><a href="https:                                  
-      <li><a href="https://files.fm/u/wtck3kvg2p">
-      <!-- Adicione mais links aqui -->
-    </ul>
-  </section>
-</body>
-<video width="640" height="480" controls>
-  <source src="https://www.kapwing.com/videos/68b9cc7714580a9637ce8146" type="video/mp4">
-</video>
 
+    <header>
+        <h1>Minha Galeria de Fotos</h1>
+    </header>
+
+    <main>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300?text=Foto+1" alt="Descrição da Foto 1">
+                <div class="gallery-item-caption">
+                    <h3>Natureza</h3>
+                    <p>Uma paisagem deslumbrante capturada ao amanhecer.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300?text=Foto+2" alt="Descrição da Foto 2">
+                <div class="gallery-item-caption">
+                    <h3>Cidade</h3>
+                    <p>A vista panorâmica do centro da cidade à noite.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300?text=Foto+3" alt="Descrição da Foto 3">
+                <div class="gallery-item-caption">
+                    <h3>Animais</h3>
+                    <p>Um gato curioso olhando pela janela.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300?text=Foto+4" alt="Descrição da Foto 4">
+                <div class="gallery-item-caption">
+                    <h3>Viagem</h3>
+                    <p>Ruas históricas de uma cidade antiga.</p>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Galeria de Fotos. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
 </html>
 <head>:</head><link rel="stylesheet" href="style.css">
 <head>:</head><body {
